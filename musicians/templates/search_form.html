@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+
+{% block title %}Search Artist Projects{% endblock %}
+
+{% block content %}
+    {{ block.super }}
+    <div class="row">
+        <form action="" method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="button">
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block title %}Search Band Musicians{% endblock %}
+
+{% block content %}
+    {{ block.super }}
+    <div class="row">
+        <form action="" method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+
+            <input type="submit" class="button">
+        </form>
+    </div>
+{% endblock %}

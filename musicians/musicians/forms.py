@@ -1,8 +1,5 @@
 from django import forms
 
-class SearchArtist(forms.Form):
+
+class search_form(forms.Form):
     name = forms.CharField()
-
-
-class SearchBand(forms.Form):
-    name = forms. CharField()

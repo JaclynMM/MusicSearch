@@ -6,13 +6,15 @@
 {% block content %}
     {{ block.super }}
     <div class="row">
-        <form action="" method="POST">
-            {{ form.as_p }}
-            {% csrf_token %}
-            <input type="submit" class="button">
+        <form id="searchform" action="{% url 'blog_search_list_view' %}" method="get" accept-charset="utf-8">
+          <button class="searchbutton" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+          <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
         </form>
     </div>
 {% endblock %}
+
 
 
 {% block title %}Search Band Musicians{% endblock %}
@@ -20,11 +22,11 @@
 {% block content %}
     {{ block.super }}
     <div class="row">
-        <form action="" method="POST">
+        <form action="/bands/" method="post">
             {{ form.as_p }}
             {% csrf_token %}
-
-            <input type="submit" class="button">
+            <label for="band_name">Band: </label>
+            <input id="band_name" type="text" name="band_name" value="{{ band_name }}">
+            <input type="submit" value="OK">
         </form>
     </div>
-{% endblock %}

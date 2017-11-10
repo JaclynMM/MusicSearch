@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f0fb54-af48-4fe6-840a-eff68f9c40ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/musicians/musicians/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/musicians/templates/search_form.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musicians/bands/templates/musicians/AlbumDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musicians/bands/templates/musicians/ArtistDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musicians/bands/templates/musicians/BandDetail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/musicians/bands/templates/musicians/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musicians/bands/views.py" afterPath="$PROJECT_DIR$/musicians/bands/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musicians/musicians/forms.py" afterPath="$PROJECT_DIR$/musicians/musicians/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musicians/musicians/urls.py" afterPath="$PROJECT_DIR$/musicians/musicians/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musicians/musicians/views.py" afterPath="$PROJECT_DIR$/musicians/musicians/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/musicians/templates/search_form.html" afterPath="$PROJECT_DIR$/musicians/templates/search_form.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/musicians/musicians/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -47,8 +40,8 @@
       <file leaf-file-name="search_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musicians/templates/search_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="480">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,14 +72,14 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musicians/musicians/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/musicians/bands/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -132,11 +125,11 @@
         <option value="$PROJECT_DIR$/musicians/bands/templates/musicians/index.html" />
         <option value="$PROJECT_DIR$/musicians/templates/musicians/index.html" />
         <option value="$PROJECT_DIR$/musicians/templates/search_artist_form.html" />
-        <option value="$PROJECT_DIR$/musicians/templates/search_form.html" />
-        <option value="$PROJECT_DIR$/musicians/musicians/forms.py" />
         <option value="$PROJECT_DIR$/musicians/musicians/urls.py" />
-        <option value="$PROJECT_DIR$/musicians/musicians/views.py" />
         <option value="$PROJECT_DIR$/musicians/bands/views.py" />
+        <option value="$PROJECT_DIR$/musicians/musicians/forms.py" />
+        <option value="$PROJECT_DIR$/musicians/templates/search_form.html" />
+        <option value="$PROJECT_DIR$/musicians/musicians/views.py" />
       </list>
     </option>
   </component>
@@ -306,7 +299,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -423,14 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musicians/templates/search_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musicians/bands/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -449,10 +434,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musicians/musicians/views.py">
+    <entry file="file://$PROJECT_DIR$/musicians/musicians/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicians/bands/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -467,26 +460,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musicians/musicians/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musicians/musicians/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musicians/bands/views.py">
+    <entry file="file://$PROJECT_DIR$/musicians/templates/search_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicians/musicians/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

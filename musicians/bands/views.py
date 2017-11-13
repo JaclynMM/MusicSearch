@@ -1,17 +1,15 @@
 from django.http import HttpResponse
 
-from . models import Artist
+from . models import Band
 
 
 def home(request):
-    return HttpResponse("<h1> This is the homepage </h1>")
+    all_bands = Band.objects.all()
+    html = ''
+    for band in all_bands:
+        url = '/bands/' + str(band_id) + '/'
+        html += "<a herf = " ' + url + ' "> ' + band.band_name' </a> <br>"
+    return HttpResponse(html)
 
-def ArtistDetail(request, artist_id):
-    return HttpResponse("<h2> Artist Details for " + str(artist_id) + "</h2>")
-
-def BandDetail(request, band_id):
-    return HttpResponse("<h2> Band Details for " + str(band_id) + "</h2>")
-
-def AlbumDetail(request, album_id):
-    return HttpResponse("<h2> Album Details for " + str(album_id) + "</h2>")
-
+def band_detail(request, band_id):
+    return HttpResponse("<h2>Details for Band Id:" + str(band_id) + "</h2>")

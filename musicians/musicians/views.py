@@ -8,16 +8,9 @@ def home(request):
     return render(request, 'home.html')
 
 
-# def search_form_view(request):
-#     if request.method == 'POST':
-#         form = forms.search_form(request.POST)
-#         if form.is_valid():
-#             return render(request, artist_name, {'form':form})
-#     else:
-#         return HttpResponse('We could not locate that search.')
-
-
 def search_form_view(request):
-    search_bar = SearchBar(request, ['name', 'age'])
+    search_bar = SearchBar(request, ['name'])
     if search_bar.is_valid():
-        my_name = search_bar['name']
+        return render(request, 'django_searchbar/home.html', {'search_bar': search_bar,})
+    else:
+        return HttpResponse('We could not locate that search.')

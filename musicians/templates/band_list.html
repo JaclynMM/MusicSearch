@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for band in bands %}
+    <p><a href="/bands/{{ band.id }}">{{ band.name }}</a></p>
+{% endfor %}
+
+{% endblock %}

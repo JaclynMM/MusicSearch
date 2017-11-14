@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% for band in bands %}
+
+<h1>{{ band.name }}</h1>
+
+<ul>
+    <ol>{{ band.members }}</ol>
+    <ol>{{ band.genre }}</ol>
+    <ol>{{ band.start_date }}</ol>
+    <ol>{{ band.end_date }}</ol>
+    <ol>{{ band.hometown }}</ol>
+    <ol>{{ band.website }}</ol>
+    <ol>{{ band.twitter_id }}</ol>
+</ul>
+
+
+{% endfor %}
+
+{% endblock %}
+
+    <!--<p>{{ band.id }}-->
+        <!--<ul>-->
+            <!--<ol>{{ band.name }}</ol>-->
+            <!--<ol>{{ band.members }}</ol>-->
+            <!--<ol>{{ band.genre }}</ol>-->
+            <!--<ol>{{ band.start_date }}</ol>-->
+            <!--<ol>{{ band.end_date }}</ol>-->
+            <!--<ol>{{ band.hometown }}</ol>-->
+            <!--<ol>{{ band.website }}</ol>-->
+            <!--<ol>{{ band.twitter_id }}</ol>-->
+        <!--</ul>-->
+    <!--</p>-->
+

@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from . import forms
+from .import forms
 
 
 def home(request):
@@ -14,3 +14,8 @@ def search_form_view(request):
         return render(request, 'django_searchbar/home.html', {'search_bar': search_bar,})
     else:
         return HttpResponse('We could not locate that search.')
+
+
+def artistform_view(request):
+    form = forms.ArtistForm()
+    return render(request, 'artist_form.html', {'form': form})

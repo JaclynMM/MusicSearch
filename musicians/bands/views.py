@@ -18,5 +18,5 @@ def home(request):
 def band_detail(request, band_id):
     get_band = Band.objects.get(id=band_id)
     return render(request, 'BandDetail.html', {
-        'band_id': band_id,
+        'band': get_band,
     })

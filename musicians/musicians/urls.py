@@ -6,6 +6,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
-    url(r'^bands/', include('bands.urls')),
+    url(r'^artist/$', views.artistform_view, name='artist_form'),
+    url(r'^band_list/', include('bands.urls')),
 
 ]

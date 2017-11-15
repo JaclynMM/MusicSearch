@@ -2,8 +2,8 @@
 
 {% block content %}
 
-{% for band in bands %}
-    <p><a href="/artist_list/{{ artist.id }}">{{ artist.first_name }} {{ artist.last_name }}</a></p>
+{% for artist in artists %}
+    <p><a href="/artist/{{ artist.id }}">{{ artist.first_name }} {{ artist.last_name }}</a></p>
 {% endfor %}
 
 {% endblock %}

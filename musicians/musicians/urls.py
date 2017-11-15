@@ -8,9 +8,9 @@ urlpatterns = [
 
     url(r'^$', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
-    url(r'^artist/$', views.artistform_view, name='artist_form'),
-    url(r'^band/$', views.bandform_view, name='band_form'),
-    url(r'^album/$', views.albumform_view, name='album_form'),
+    url(r'^artist/$', views.artist_form.as_view(), name='artist_form'),
+    url(r'^band/$', views.band_form.as_view(), name='band_form'),
+    url(r'^album/$', views.album_form.as_view(), name='album_form'),
 
     url(r'^band_list/', band_views.band_list, name='band_list'),
     url(r'^artist_list/', band_views.artist_list, name='artist_list'),

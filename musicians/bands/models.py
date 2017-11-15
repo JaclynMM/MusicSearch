@@ -18,7 +18,7 @@ class Band(models.Model):
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
     hometown = models.CharField(max_length=150)
-    website = models.URLField()
+    website = models.URLField(blank=True)
     twitter_id = models.CharField(max_length=150, blank=True, null=True)
 
     def __str__(self):

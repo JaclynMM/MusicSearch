@@ -4,8 +4,10 @@
 # from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 
 from .import forms
+from bands.models import Album, Artist, Band
 
 
 def home(request):
@@ -26,18 +28,6 @@ def artistform_view(request):
         form = forms.ArtistForm(request.POST)
         if form.is_valid():
             print("Artist Added")
-            # to send info in to email
-            # send_mail(
-            #     'Artist from {}'.format(form.cleaned_data['name']),
-            #     form.cleaned_data['Band'],
-            #     form.cleaned_data['Name'],
-            #     form.cleaned_data['Create Date'],
-            #     ['jaclyn.mullin@gmail.com']
-            # )
-            # messages.add_message(request, messages.SUCCESS,
-            #                      'Thank you for your expertise. '
-            #                      'Our team will review your input and add do the database for others to enjoy')
-            # return HttpResponseRedirect('artist_form')
     return render(request, 'artist_form.html', {'form': form})
 
 
@@ -50,11 +40,63 @@ def bandform_view(request):
     return render(request, 'band_form.html', {'form': form})
 
 
-def albumform_view(request):
-    form = forms.AlbumForm()
-    if request.method == 'POST':
-        form = forms.AlbumForm(request.POST)
-        if form.is_valid():
-            print("Album Added")
-    return render(request, 'album_form.html', {'form': form})
+# class AlbumView(FormView):
+#     template_name = 'album_form.html'
+#     form_class = forms.AlbumForm
+#     success_url = '/album_list/'
+#
+#     def form_valid(self, form):
+#         return super(AlbumView, self).form_valid(form)
+
+
+class artist_form(CreateView):
+    template_name = 'artist_form.html'
+    model = Artist
+    fields = [
+        'first_name',
+        'last_name',
+        'hometown',
+        'twitter_id',
+    ]
+    template_name_suffix = '_form'
+    success_url = '/artist_list/'
+
+
+class band_form(CreateView):
+    template_name = 'band_form.html'
+    model = Band
+    fields = [
+        'members',
+        'name',
+        'genre',
+        'start_date',
+        'end_date',
+        'hometown',
+        'website',
+        'twitter_id',
+    ]
+    template_name_suffix = '_form'
+    success_url = '/band_list/'
+
+
+class album_form(CreateView):
+    template_name = 'album_form.html'
+    model = Album
+    fields = [
+        'band',
+        'name',
+        'create_date',
+    ]
+    template_name_suffix = '_form'
+    success_url = '/album_list/'
+
+
+
+# def albumform_view(request):
+#     form = forms.AlbumForm()
+#     if request.method == 'POST':
+#         form = forms.AlbumForm(request.POST)
+#         if form.is_valid():
+#             print("Album Added")
+#     return render(request, 'album_form.html', {'form': form})
 

@@ -22,5 +22,5 @@ class BandForm(forms.Form):
 class AlbumForm(forms.Form):
     band = forms.CharField(max_length=150)
     name = forms.CharField(max_length=150)
-    create_date= forms.DateField()
+    create_date = forms.DateField()
 

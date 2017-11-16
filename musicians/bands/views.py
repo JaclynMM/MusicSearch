@@ -54,3 +54,5 @@ def album_list(request):
     return render(request, 'album_list.html', {
         'albums': get_album,
     })
+
+

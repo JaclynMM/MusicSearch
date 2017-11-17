@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 
+{% load static from staticfiles %}
+
 {% block title %}Band Delete{% endblock %}
 
 {% block content %}
 
+<div class="container">
     <div class="row">
         <form action="" method="post">
             {% csrf_token %}
             <h2>Are you sure you want to delete this band?</h2>
-            <input type="submit" class="button" value="Delete" />
+            <input type="submit" class=".btn-danger" value="Delete" />
         </form>
     </div>
+</div>
 
 {% endblock %}

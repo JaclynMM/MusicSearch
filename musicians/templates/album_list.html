@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 
+{% load static from staticfiles %}
+
 {% block content %}
 
 {% for album in albums %}
 
-    <p><a href="/album/{{ album.id }}">{{ album.name }}</a></p>
-
-    <a href="/album_list/" type="button">View All Albums</a>
+<p><a href="/album/{{ album.id }}">{{ album.name }}</a></p>
 
 {% endfor %}
+
+<br>
+
+<div>
+        <a href="/album_list/" type="button"><input type="submit" value="View All Albums" class="button"></a>
+</div>
 
 {% endblock %}

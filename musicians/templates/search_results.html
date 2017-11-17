@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 
+{% load static from staticfiles %}
 
 {% block content %}
+<div class="container">
+    <h1>Search Results</h1>
 
-<h1>Search Results</h1>
+    <ul>
+        {% for artist in artists %}
+        <ol>{{ artist.first_name }} {{ artist.last_name }}</ol>
+        {% endfor %}
+    </ul>
 
-<ul>
-    {% for artist in artists %}
-    <ol>{{ artist.first_name }} {{ artist.last_name }}</ol>
-    {% endfor %}
-</ul>
-
-<ul>
-    {% for band in bands %}
-    <ol>{{ band.name }}</ol>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for band in bands %}
+        <ol>{{ band.name }}</ol>
+        {% endfor %}
+    </ul>
+</div>
 
 {% endblock %}
 

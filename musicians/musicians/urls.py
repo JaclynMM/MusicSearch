@@ -29,5 +29,4 @@ urlpatterns = [
     url(r'^band_update/(?P<pk>[0-9]+)/$', views.band_update_form.as_view(), name='band_update_form'),
     url(r'^album_update/(?P<pk>[0-9]+)/$', views.album_update_form.as_view(), name='album_update_form'),
 
-
 ]

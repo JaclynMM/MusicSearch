@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 
+{% load static from staticfiles %}
+
 {% block content %}
 
 {% for band in bands %}
 
     <p><a href="/band/{{ band.id }}">{{ band.name }}</a></p>
 
-    <a href="/band_list/" type="button">View All Bands</a>
-
 {% endfor %}
+
+<br>
+
+    <a href="/band_list/" type="button" class="button"><input type="submit" value="View All Bands" class="button"></a>
+
 
 {% endblock %}

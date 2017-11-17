@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
+{% load static from staticfiles %}
+
 {% block title %}Artist Update{% endblock %}
 
 {% block content %}
 
+<div class="container">
     <div class="row">
         <form action="" method="post">
             {{ form.as_p }}
@@ -11,6 +14,6 @@
             <input type="submit" class="button" value="Update" />
         </form>
     </div>
-
+</div>
 
 {% endblock %}

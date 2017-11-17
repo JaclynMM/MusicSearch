@@ -11,6 +11,7 @@ def home(request):
     })
 
 
+#Detail Views for all 3 Models
 def band_detail(request, band_id):
     get_band = Band.objects.get(id=band_id)
     return render(request, 'BandDetail.html', {
@@ -32,6 +33,7 @@ def album_detail(request, album_id):
     })
 
 
+#List Views for all 3 Models
 def band_list(request):
     get_band = Band.objects.all()
     print(get_band)

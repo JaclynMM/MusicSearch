@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 
+{% load static from staticfiles %}
+
 {% block content %}
 
 {% for artist in artists %}
 
     <p><a href="/artist/{{ artist.id }}">{{ artist.first_name }} {{ artist.last_name }}</a></p>
 
-    <a href="/artist_list/" type="button">View All Artists</a>
-
 {% endfor %}
+
+<br>
+
+<div>
+    <a href="/artist_list/" type="button"><input type="submit" value="View All Artists" class="button"></a>
+</div>
 
 {% endblock %}

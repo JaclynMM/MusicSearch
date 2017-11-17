@@ -9,6 +9,7 @@ from bands.models import Album, Artist, Band
 def home(request):
     return render(request, 'home.html')
 
+
 #Search Bar
 def search_form_view(request):
     query = request.GET.get("q")

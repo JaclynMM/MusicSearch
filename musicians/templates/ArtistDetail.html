@@ -3,12 +3,15 @@
 
 {% block content %}
 
-<h1>{{ artist.first_name }} {{ artist.last_name }}</h1>
+<h1>{{ artists.first_name }} {{ artists.last_name }}</h1>
 
 <ul>
-    <ol>{{ artist.hometown }}</ol><br>
-    <ol>{{ artist.twitter_id }}</ol>
+    <ol>{{ artists.hometown }}</ol><br>
+{% if artists.twitter_id %} <ol>{{ artists.twitter_id }}</ol> {% endif %}
 </ul>
+
+<p><a href="{% url 'artist_update_form' pk=artists.pk %}" class="btn">Edit</a></p>
+<p><a href="{% url 'artist_delete_form' pk=artists.pk %}" class="btn">Delete</a></p>
 
 {% endblock %}
 

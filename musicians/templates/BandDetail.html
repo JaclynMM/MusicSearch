@@ -3,21 +3,23 @@
 
 {% block content %}
 
-<h1>{{ band.name }}</h1>
+<h1>{{ bands.name }}</h1>
 
 <ul>
     {% for artist in band.members.all %}
     <ol>{{ artist.first_name }} {{ artist.last_name }}</ol>
     {% endfor %}
 
-    <ol>{{ band.genre }}</ol> <br>
-    <ol>{{ band.start_date }}</ol> <br>
-    <ol>{{ band.end_date }}</ol> <br>
-    <ol>{{ band.hometown }}</ol> <br>
-    <ol>{{ band.website }}</ol> <br>
-    <ol>{{ band.twitter_id }}</ol>
+    <ol>{{ bands.genre }}</ol> <br>
+    <ol>{{ bands.start_date }}</ol> <br>
+    <ol>{{ bands.end_date }}</ol> <br>
+    {% if artists.twitter_id %} <ol>{{ bands.hometown }}</ol> {% endif %} <br>
+    {% if artists.twitter_id %} <ol>{{ bands.website }}</ol> {% endif %} <br>
+    {% if artists.twitter_id %} <ol>{{ bands.twitter_id }}</ol> {% endif %}
 </ul>
 
+<p><a href="{% url 'band_update_form' pk=bands.pk %}" class="btn">Edit</a></p>
+<p><a href="{% url 'band_delete_form' pk=bands.pk %}" class="btn">Delete</a></p>
 
 {% endblock %}
 

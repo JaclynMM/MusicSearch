@@ -3,12 +3,15 @@
 
 {% block content %}
 
-<h1>{{ album.name }}</h1>
+<h1>{{ albums.name }}</h1>
 
 <ul>
-    <ol>{{ album.band }}</ol><br>
-    <ol>{{ album.create_date }}</ol>
+    <ol>{{ albums.band }}</ol><br>
+    <ol>{{ albums.create_date }}</ol>
 </ul>
+
+<p><a href="{% url 'album_update_form' pk=albums.pk %}" class="btn">Edit</a></p>
+<p><a href="{% url 'album_delete_form' pk=albums.pk %}" class="btn">Delete</a></p>
 
 
 {% endblock %}

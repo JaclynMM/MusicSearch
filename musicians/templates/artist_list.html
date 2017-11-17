@@ -3,7 +3,11 @@
 {% block content %}
 
 {% for artist in artists %}
+
     <p><a href="/artist/{{ artist.id }}">{{ artist.first_name }} {{ artist.last_name }}</a></p>
+
+    <a href="/artist_list/" type="button">View All Artists</a>
+
 {% endfor %}
 
 {% endblock %}

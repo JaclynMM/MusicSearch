@@ -3,7 +3,11 @@
 {% block content %}
 
 {% for band in bands %}
+
     <p><a href="/band/{{ band.id }}">{{ band.name }}</a></p>
+
+    <a href="/band_list/" type="button">View All Bands</a>
+
 {% endfor %}
 
 {% endblock %}

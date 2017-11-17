@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beyond the Band</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
 </head>
 
 <body>
@@ -13,7 +16,7 @@
     <h1>Beyond the Band</h1>
 
     <h2>Search</h2>
-    <form method="GET" action="{{ search_bar }}">
+    <form method="GET" action="/search/">
         <input name='q' type="text"/>
         <button type="submit">Search</button>
     </form>
@@ -24,16 +27,22 @@
 
     <h2>Artists</h2>
     <a href="/artist/" type="button">Artists Page</a>
+    <a href="/artist_list/" type="button">View All Artists</a>
+
 
     </br></br></br>
 
     <h2>Bands</h2>
     <a href="/band/" type="button">Bands Page</a>
+    <a href="/band_list/" type="button">View All Bands</a>
+
 
     </br></br></br>
 
     <h2>Albums</h2>
     <a href="/album/" type="button">Albums Page</a>
+    <a href="/album_list/" type="button">View All Albums</a>
+
 
 </body>
 </html>

@@ -26,7 +26,7 @@ class Band(models.Model):
 
 
 class Album(models.Model):
-    band = models.ForeignKey(Band)
+    band = models.ForeignKey(Band, on_delete=models.PROTECT)
     name = models.CharField(max_length=150)
     create_date= models.DateField()
 

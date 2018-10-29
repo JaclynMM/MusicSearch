@@ -1,7 +1,36 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import viewsets
+
+from .serializers import ArtistSerializer, BandSerializer, AlbumSerializer
+
 from .models import Band, Artist, Album
+
+class ArtistViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Artist.objects.all()
+    serializer_class = ArtistSerializer
+
+
+class BandViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Band.objects.all()
+    serializer_class = BandSerializer
+
+class AlbumViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Album.objects.all()
+    serializer_class = BandSerializer
 
 
 def home(request):

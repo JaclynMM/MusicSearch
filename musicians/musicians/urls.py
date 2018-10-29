@@ -4,9 +4,20 @@ from django.contrib import admin
 from . import views
 from bands import views as band_views
 
-urlpatterns = [
+from rest_framework import routers
 
-    url(r'^$', views.home, name='home'),
+router = routers.DefaultRouter()
+router.register(r'Artist', band_views.ArtistViewSet)
+router.register(r'Band', band_views.BandViewSet)
+router.register(r'Album', band_views.AlbumViewSet)
+
+# Wire up our API using automatic URL routing.
+# Additionally, we include login URLs for the browsable API.
+urlpatterns = [
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+    url(r'^home/', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^artist/$', views.artist_form.as_view(), name='artist_form'),
     url(r'^band/$', views.band_form.as_view(), name='band_form'),

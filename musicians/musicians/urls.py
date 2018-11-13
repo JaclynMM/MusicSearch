@@ -23,6 +23,12 @@ urlpatterns = [
     url(r'^band/$', views.band_form.as_view(), name='band_form'),
     url(r'^album/$', views.album_form.as_view(), name='album_form'),
     url(r'^search/$', views.search_form_view, name='search'),
+    url(r'^artist-search/$', views.artist_search_view, name='searchArtist'),
+    url(r'^band-search/$', views.band_search_view, name='searchBand'),
+    url(r'^artist-search-id/$', views.artist_search_id_view, name='searchArtistbyID'),
+    url(r'^band-search-id/$', views.band_search_id_view, name='searchBandbyID'),
+
+
 
     url(r'^band_list/', band_views.band_list, name='band_list'),
     url(r'^artist_list/', band_views.artist_list, name='artist_list'),

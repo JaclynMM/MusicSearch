@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .import forms
 from bands.models import Album, Artist, Band
+from django.core import serializers
 
 
 def home(request):
@@ -16,6 +17,30 @@ def search_form_view(request):
     artists = Artist.objects.filter(last_name=query)
     bands = Band.objects.filter(name=query)
     return render(request, 'search_results.html', {'artists': artists, 'bands': bands})
+
+def artist_search_view(request):
+    query = request.GET.get("q")
+    artists = Artist.objects.filter(last_name=query)
+    data = serializers.serialize ("json", artists)
+    return HttpResponse (data, content_type="application/json")
+
+def artist_search_id_view(request):
+    query = request.GET.get("id")
+    artists = Artist.objects.filter(id=query)
+    data = serializers.serialize ("json", artists)
+    return HttpResponse (data, content_type="application/json")
+
+def band_search_view(request):
+    query = request.GET.get("q")
+    bands = Band.objects.filter(name=query)
+    data = serializers.serialize ("json", bands)
+    return HttpResponse (data, content_type="application/json")
+
+def band_search_id_view(request):
+    query = request.GET.get("id")
+    bands = Band.objects.filter(id=query)
+    data = serializers.serialize ("json", bands)
+    return HttpResponse (data, content_type="application/json")
 
 
 def artistform_view(request):
@@ -45,6 +70,7 @@ class artist_form(CreateView):
         'last_name',
         'hometown',
         'twitter_id',
+        'id',
     ]
     template_name_suffix = '_form'
     success_url = '/artist_list/'
@@ -64,6 +90,7 @@ class artist_update_form(UpdateView):
         'last_name',
         'hometown',
         'twitter_id',
+        'id',
     ]
     success_url = '/artist_list/'
 
@@ -81,6 +108,7 @@ class band_form(CreateView):
         'hometown',
         'website',
         'twitter_id',
+        'id',
     ]
     template_name_suffix = '_form'
     success_url = '/band_list/'

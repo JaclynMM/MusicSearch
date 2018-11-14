@@ -14,13 +14,13 @@ def home(request):
 #Search Bar
 def search_form_view(request):
     query = request.GET.get("q")
-    artists = Artist.objects.filter(last_name=query)
+    artists = Artist.objects.filter(last_name__icontains=query)
     bands = Band.objects.filter(name=query)
     return render(request, 'search_results.html', {'artists': artists, 'bands': bands})
 
 def artist_search_view(request):
     query = request.GET.get("q")
-    artists = Artist.objects.filter(last_name=query)
+    artists = Artist.objects.filter(last_name__icontains=query)
     data = serializers.serialize ("json", artists)
     return HttpResponse (data, content_type="application/json")
 
@@ -32,7 +32,7 @@ def artist_search_id_view(request):
 
 def band_search_view(request):
     query = request.GET.get("q")
-    bands = Band.objects.filter(name=query)
+    bands = Band.objects.filter(name__icontains=query)
     data = serializers.serialize ("json", bands)
     return HttpResponse (data, content_type="application/json")
 

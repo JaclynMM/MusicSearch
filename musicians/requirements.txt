@@ -1,4 +1,4 @@
 Django==1.11.7
 pytz==2017.3
-django-cors-headers=2.4.0
-djangorestframework=3.9.0
+django-cors-headers==2.4.0
+djangorestframework==3.9.0
